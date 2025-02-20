@@ -1,0 +1,4 @@
+# Exclude virtual environment folder
+env/
+# Exclude database file
+app.db

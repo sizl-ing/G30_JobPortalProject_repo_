@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings - CareerConnect</title>
+    <link rel="stylesheet" href="/static/Css/theme.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="{{ url_for('index')}}" style="text-decoration: none;">CareerConnect</a></div>
+            <div class="nav-links">
+                <a href="{{ url_for('find_jobs')}}">Find Jobs</a>
+                <a href="{{ url_for('companies')}}">Companies</a>
+                <a href="{{ url_for('resources')}}">Resources</a>
+                <a href="{{ url_for('post_job')}}">Post a Job</a>
+            </div>
+            <div class="auth-buttons">
+                <button class="btn btn-outline"> <a href="{{ url_for('login')}}" style="text-decoration: none;  color: #4338ca">Sign In</a></button>
+                <button class="btn btn-primary"><a href="{{ url_for('register')}}" style="text-decoration: none; color: #fff">Sign Up</a></button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="job-listings">
+            <div class="filters">
+                <h2>Filter Jobs</h2>
+                <div class="filter-options">
+                    <select>
+                        <option value="">Job Type</option>
+                        <option value="full-time">Full-time</option>
+                        <option value="part-time">Part-time</option>
+                        <option value="remote">Remote</option>
+                    </select>
+                    <select>
+                        <option value="">Location</option>
+                        <option value="usa">USA</option>
+                        <option value="canada">Canada</option>
+                        <option value="europe">Europe</option>
+                    </select>
+                    <button class="btn btn-primary">Apply Filters</button>
+                </div>
+            </div>
+
+            <div class="jobs-grid">
+                <div class="job-card">
+                    <h3>Frontend Developer</h3>
+                    <div class="company-info">
+                        <p>WebWorks</p>
+                        <p>Remote</p>
+                    </div>
+                    <p class="job-description">We are looking for a skilled Frontend Developer to join our team and help build responsive web applications.</p>
+                    <div class="job-tags">
+                        <span class="tag">Full-time</span>
+                        <span class="tag">Remote</span>
+                        <span class="tag">React</span>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <h3>Data Scientist</h3>
+                    <div class="company-info">
+                        <p>Data Insights</p>
+                        <p>New York, NY</p>
+                    </div>
+                    <p class="job-description">Join our data team to analyze large datasets and build predictive models using machine learning.</p>
+                    <div class="job-tags">
+                        <span class="tag">Full-time</span>
+                        <span class="tag">On-site</span>
+                        <span class="tag">Python</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <!-- Same footer as the homepage -->
+        </div>
+    </footer>
+</body>
+</html>

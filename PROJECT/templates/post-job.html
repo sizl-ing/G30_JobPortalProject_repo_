@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post a Job - CareerConnect</title>
+    <link rel="stylesheet" href="/static/Css/styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="{{ url_for('index')}}" style="text-decoration: none;">CareerConnect</a></div>
+            <div class="nav-links">
+                <a href="{{ url_for('find_jobs')}}">Find Jobs</a>
+                <a href="{{ url_for('companies')}}">Companies</a>
+                <a href="{{ url_for('resources')}}">Resources</a>
+                <a href="{{ url_for('post_job')}}">Post a Job</a>
+            </div>
+            <div class="auth-buttons">
+                <button class="btn btn-outline"> <a href="{{ url_for('login')}}" style="text-decoration: none;  color: #4338ca">Sign In</a></button>
+                <button class="btn btn-primary"><a href="{{ url_for('register')}}" style="text-decoration: none; color: #fff">Sign Up</a></button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="post-job">
+            <h2 class="section-title">Post a Job</h2>
+            <form class="job-form" method="post">
+                <div class="form-group">
+                    <label for="job-title">Job Title</label>
+                    <input type="text" id="job-title" placeholder="Enter job title" required>
+                </div>
+                <div class="form-group">
+                    <label for="company-name">Company Name</label>
+                    <input type="text" id="company-name" placeholder="Enter company name" required>
+                </div>
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" placeholder="Enter job location" required>
+                </div>
+                <div class="form-group">
+                    <label for="job-description">Job Description</label>
+                    <textarea id="job-description" placeholder="Enter job description" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Post Job</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <!-- Same footer as the homepage -->
+        </div>
+    </footer>
+</body>
+</html>

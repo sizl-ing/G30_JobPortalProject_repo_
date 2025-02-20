@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - CareerConnect</title>
+    <link rel="stylesheet" href="/static/Css/styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="{{ url_for('index')}}" style="text-decoration: none;">CareerConnect</a></div>
+            <div class="nav-links">
+                <a href="{{ url_for('find_jobs')}}">Find Jobs</a>
+                <a href="{{ url_for('companies')}}">Companies</a>
+                <a href="{{ url_for('resources')}}">Resources</a>
+                <a href="{{ url_for('post_job')}}">Post a Job</a>
+            </div>
+            <div class="auth-buttons">
+                <button class="btn btn-outline"> <a href="{{ url_for('login')}}" style="text-decoration: none;  color: #4338ca">Sign In</a></button>
+                <button class="btn btn-primary"><a href="{{ url_for('register')}}" style="text-decoration: none; color: #fff">Sign Up</a></button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="resources">
+            <h2 class="section-title">Career Resources</h2>
+            <div class="resource-cards">
+                <div class="resource-card">
+                    <h3>Resume Writing Tips</h3>
+                    <p>Learn how to craft a professional resume that stands out to employers.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+
+                <div class="resource-card">
+                    <h3>Interview Preparation</h3>
+                    <p>Get ready for your next interview with our comprehensive guide.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+
+                <div class="resource-card">
+                    <h3>Career Growth</h3>
+                    <p>Discover strategies to advance your career and achieve your goals.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <!-- Same footer as the homepage -->
+        </div>
+    </footer>
+</body>
+</html>
